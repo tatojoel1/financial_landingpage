@@ -1,5 +1,30 @@
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 function App() {
+  //Validacion de formulario
+  const formik = useFormik({
+    initialValues: {
+      nombre: "",
+      apellido: "",
+      email: "",
+      password: "",
+    },
+    validationSchema: Yup.object({
+      nombre: Yup.string().required("El nombre es obligatorio"),
+      apellido: Yup.string().required("El apellido es obligatorio"),
+      email: Yup.string()
+        .email("Email no valido")
+        .required("El email es obligatorio"),
+      password: Yup.string()
+        .required("El password no puede ir vacio")
+        .min(6, "El password debe ser de al menos 6 caracteres"),
+    }),
+    onSubmit: async (valores) => {
+      console.log(valores);
+    },
+  });
+
   return (
     <div className="App">
       <nav
@@ -49,7 +74,7 @@ function App() {
             </ul>
             <span class="nav-item">
               <a class="btn-solid-sm" href="#contact">
-                Get quote
+                ¡Contactanos!
               </a>
             </span>
           </div>
@@ -166,7 +191,7 @@ function App() {
                   bibendum magna tincidunt
                 </p>
                 <a class="btn-solid-reg" href="#contact">
-                  Get quote
+                  ¡Contactanos!
                 </a>
               </div>
             </div>
