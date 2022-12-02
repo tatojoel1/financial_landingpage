@@ -58,7 +58,7 @@ function App() {
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#services">
-                  Sevicios
+                  Servicios
                 </a>
               </li>
               <li class="nav-item">
