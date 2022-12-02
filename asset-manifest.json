@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/financial_landingpage/static/css/main.31d6cfe0.css",
+    "main.js": "/financial_landingpage/static/js/main.bbad36f0.js",
+    "index.html": "/financial_landingpage/index.html",
+    "main.bbad36f0.js.map": "/financial_landingpage/static/js/main.bbad36f0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.bbad36f0.js"
+  ]
+}
